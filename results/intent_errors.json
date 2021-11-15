@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Murabeho",
+    "intent": "salutations",
+    "intent_prediction": {
+      "name": "sendoff",
+      "confidence": 0.5972232222557068
+    }
+  }
+]

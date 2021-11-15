@@ -1,0 +1,230 @@
+[
+  {
+    "text": "nzishyura angahe yo kutambara agapfukamunwa?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 43,
+        "value": "kutambara agapfukamunwa",
+        "entity": "offence-mask"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "bizagenda gute nintubahiriza amasaha ntarengwa?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 46,
+        "value": "amasaha ntarengwa",
+        "entity": "offence-curfew"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "mfatiwe mu kabari?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "kabari",
+        "entity": "offence-bar"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "abagiye mu matsinda atemewe bishyura angahe?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 27,
+        "value": "matsinda atemewe",
+        "entity": "offence-gathering"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "biragenda gute nintaguma mu rugo?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 32,
+        "value": "nintaguma mu rugo",
+        "entity": "offence-lockdown"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "bigendute iyo umuntu yishe amabwiriza yo guhana intera?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 54,
+        "value": "guhana intera",
+        "entity": "offence-distance"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "igipimo cya covid 19 ni amafranga angahe?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "covid 19",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "kwipimisha covid ni angahe ?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 16,
+        "value": "covid",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "igipimo cya covid gitakaza agaciro ryari?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "covid",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "kovide igira ibihe ibimenyetso,",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "kovide",
+        "entity": "disease"
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "value": "ibimenyetso",
+        "entity": "symptom"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nafashe igipimo cya covid ejo hashize, ese cyaba kigifite agaciro?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "covid",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ni hehe najya ngo nipimishe covid",
+    "entities": [
+      {
+        "start": 28,
+        "end": 33,
+        "value": "covid",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "nakwipimishiriza hehe covid",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "covid",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ese abahitwa bose baba bafite kovide",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "kovide",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "inkorora cyaba ari kimwe mu bimenyetso",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "inkorora",
+        "entity": "symptom"
+      },
+      {
+        "start": 28,
+        "end": 38,
+        "value": "bimenyetso",
+        "entity": "symptom"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hari abanduye bangahe mu rwanda",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "rwanda",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ijanisha ryabanduye  mu rwanda",
+    "entities": [
+      {
+        "start": 24,
+        "end": 30,
+        "value": "rwanda",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "kwirinda covid 19?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "covid 19",
+        "entity": "disease"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,33 @@
+version: "2.0"
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: say ok when user affirms
+  steps:
+  - intent: affirm
+  - action: utter_ok
+
+- rule: say ok when user affirms after utter_did_that_help
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_ok
+
+- rule: say sorry and ask what else when user denies after utter_did_that_help
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_whatelse
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_youwelcome
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: sendoff
+  - action: utter_sendoff
+

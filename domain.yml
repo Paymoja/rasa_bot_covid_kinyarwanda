@@ -1,0 +1,187 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- symptoms:
+    use_entities: true
+- salutations:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- statistics:
+    use_entities: true
+- sendoff:
+    use_entities: true
+- prevention:
+    use_entities: true
+- fines_penalties:
+    use_entities: true
+- testing_costs:
+    use_entities: true
+- testing_validity:
+    use_entities: true
+- testing_centers:
+    use_entities: true
+- affirm:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- deny:
+    use_entities: true
+entities:
+- symptom
+- location
+- country
+- disease
+- offence-mask
+- offence-distance
+- offence-curfew
+- offence-gathering
+- offence-lockdown
+- offence-bar
+- service-type
+- value
+- synonyms
+- GPE
+- person
+slots: {}
+responses:
+  utter_default:
+  - text: Ntabwo ndimo kumva neza icyo mushaka kubaza. ese mwabaza mubundi buryo?
+  utter_sendoff:
+  - text: Mwirirwe
+  utter_ok:
+  - text: Byiza! 👍
+  utter_ask_whatelse:
+  - text: |
+      Mwihangane sinshoboye kubafasha 😞 
+      Ese hari ikindi mwaba mwifuza kumenya?
+  utter_youwelcome:
+  - text: Murakoze 🙂
+  utter_salutations:
+  - text: |
+      Muraho! amazina yange ni Mbaza 👋!
+      Nshobora kubasubiza ibibazo mwibaza kuri KORONAVIRUSI, nk':
+      • Ibimenyetso by'ubwandu bwa KORONAVIRUSI
+      • Imibare yabanduye mu Rwanda
+      • Uko wakwirinda KORONAVIRUSI
+      • Ibyemezo byo gukumira KORONAVIRUSI
+      • Ibiciro by'ibipimo bya KORONAVIRUSI
+      • Igihe ibipimo bya KORONAVIRUSI bimara
+      • Aho wakwipimishiriza KORONAVIRUSI
+  utter_prevention:
+  - text: |
+      Kugirango wirinde KORONAVIRUSI:
+      • Karaba intoki kenshi n’isabune n’amazi,
+        byibura mu gihe cy’amasegonda 20. Igihe
+        isabune n’amazi bitabonetse, koresha umuti
+        usukura intoki urimo arukoro byibura ingana
+        na 60%.
+      • Irinde kwikora mu gahanga, mu maso, ku
+        mazuru cyangwa ku munwa udakarabye
+        intoki.
+      • Irinde kwegerana n’abantu barwaye.
+      • Guma mu rugo niba urwaye.
+      • Igihe ukoroye cyangwa witsamuye, pfuka
+        umunwa n’amazuru ukoresheje agatambaro
+        cyangwa uruhiniro rw’inkokora.
+      • Sukura kandi uhanagure ahantu n’ibintu
+        bikunze gukoreshwaho intoki.
+      • Irinde kujya ahateraniye abantu benshi.
+      • Ambara agapfukamunwa igihe uvuye mu
+        rugo.
+  utter_symptoms:
+  - text: |
+      Ibimenyetso by'ubwandu bwa KORONAVIRUSI ni:
+      • Inkorora y'akayi,
+      • Guhumeka nabi,
+      • Kugira umuriro utagabanuka
+      • Guhitwa
+      • kubabara mu mubiri cyangwa guhinda umushyitsi
+      • Kubabara mu muhogo
+      • Kurwara ibicurane
+
+      Ibimenyetso by'ubwandu bwa KORONAVIRUSI yo mu bwoko bwa Delta ni:
+      • Inkorora y'akayi,
+      • Guhumeka nabi,
+      • Kugira umuriro utaganuka
+      • Guhitwa
+      • kubabara mu mubiri cyangwa guhinda umushyitsi
+      • Kubabara mu muhogo
+      • Kurwara ibicurane
+      • Umutwe udakira
+  utter_testing_costs:
+  - text: |
+      • Igipimo cya RT-PCR: 47,200 Frw
+      • Igipimo cya Rapid Antigen: 5,000 Frw
+  utter_testing_validity:
+  - text: |
+      Igipimo cya PCR gita agaciro nyuma y'amasaha 72 uhereye igihe wagitangiye
+  utter_fines_penalties_mask:
+  - text: Abaturage bose bagomba kwambara agapfukamunwa, kutambara agapfukamunwa; amande ni 25000 Frws
+  utter_fines_penalties_distance:
+  - text: Abaturage basabwe kubahiriza guhana intera, kudasiga intera ya metero 2 hagati yabantu, amande ya 10,000Frws
+  utter_fines_penalties_curfew:
+  - text: kutubatubahiriza amasaha yagenwe yo gutaha, amande ni 10,000Frws
+  utter_fines_penalties_gathering:
+  - text: kujya mu matsinda cyangwa ibirori bitemewe, amande ni 25,000Frws kuri buri muntu ndetse na 200,000Frws kubabiteguye.
+  utter_fines_penalties_lockdown:
+  - text: kutubahiriza gahunda ya guma mu rugo, amande ni 50,000Frws fine.
+  utter_fines_penalties_bar:
+  - text: Kujya mu tubari, amande ni 25,000Frws
+  utter_choose_fines_penalties:
+  - buttons:
+    - payload: /fines_penalties{{"offence-mask":"not wearing a mask"}}
+      title: Agapfukamunwa
+    - payload: /fines_penalties{{"offence-distance":"without social distancing"}}
+      title: Guhana intera
+    - payload: /fines_penalties{{"offence-curfew":"violating curfew"}}
+      title: Amamasaha yategetswe
+    - payload: /fines_penalties{{"offence-gathering":"in gatherings that are not allowed"}}
+      title: Amatsinda/Amahuriro atemewe
+    - payload: /fines_penalties{{"offence-lockdown":"not following lockdown"}}
+      title: Guma mu rugo
+    - payload: /fines_penalties{{"offence-bar":"in a bar"}}
+      title: Utubari
+    text: Hitamo amande waba wifuza kumenya.
+  utter_statistics:
+  - text: Mu {location} abanduye uyu munsi ni {number}, bose hamwe ni {total}
+  utter_within_or_outside_kigali:
+  - buttons:
+    - payload: /testing_centers{{"location":"kigali"}}
+      title: Muri Kigali
+    - payload: /testing_centers{{"location":"mu ntara"}}
+      title: Mu Ntara
+    text: Ese uri muri Kigali cyangwa mu Ntara?
+  utter_ask_location:
+  - text: Uri mu kahe karere?
+  utter_location_not_found:
+  - text: Munyihanganire, ariko ndakeka {location} atari akarere. gerageza urebe akarere waba uherereyemo
+  utter_show_kigali_testing_centers:
+  - text: |
+      Muri Kigali:
+      Igipimo cya RT-PCR gifatirwa:
+        - RBC Gikondo (KK 6 Ave, Kigali) 
+        - Kigali Conference and Exhibition Village (KCEV) hasanzwe hazwi nko muri Camp Kigali mukorohereza ba mukerarugendo ndetse nabo mu nzego zikorera ku giti cyabo.  
+          Aho hombi, ibikorwa byabo bikora kuva saa moya (7 am) za mugitondo kugera saa kumi n'imwe z'umugoroba (5pm).
+
+      Igipimo cya Rapid Antigen:
+        Gitangirwa kuri buri bitaro bikwegereye cyangwa uhamagare  kuri  114 uhabwe ubufasha bwibanze.
+  utter_show_other_testing_centers:
+  - text: |
+      Hanze ya Kigali:
+      Igipimo cya RT-PCR: 
+        Hamagara kuri 114 kugirango umenye ahandi hantu wafatira igipimo cya Kovide hanze y'umujyi wa Kigali. 
+
+      Igipimo cya Rapid Antigen:
+        Gitangirwa kuri buri bitaro bikwegereye cyangwa uhamagare  kuri  114 uhabwe ubufasha bwibanze.
+actions:
+- action_check_statistics
+- action_check_fines_penalties
+- action_show_testing_centers
+- action_kba_layer
+forms: {}
+e2e_actions: []

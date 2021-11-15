@@ -1,0 +1,177 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+#Symptoms
+- story: symptoms
+  steps:
+  - user: |
+       [kovide]{"entity": "disease"} igira ibihe [ibimenyetso]{"entity": "symptom"}, 
+    intent: symptoms
+  - action: utter_symptoms
+
+- story: symptoms
+  steps:  
+  - user: |
+      ese abahitwa bose baba bafite [kovide]{"entity": "disease"}
+    intent: symptoms
+  - action: utter_symptoms
+
+- story: symptoms
+  steps: 
+  - user: |
+      [inkorora]{"entity": "symptom"} cyaba ari kimwe mu [bimenyetso]{"entity": "symptom"}
+    intent: symptoms
+  - action: utter_symptoms
+
+#statistics
+- story: statistics
+  steps: 
+  - user: |
+      hari abarwayi bangana iki uyu munsi
+    intent: statistics
+  - action: action_check_statistics
+
+- story: statistics
+  steps: 
+  - user: |
+      hari abanduye bangahe mu [rwanda]{"entity": "location"}
+    intent: statistics
+  - action: action_check_statistics
+
+- story: statistics
+  steps: 
+  - user: |
+      ijanisha ryabanduye  mu [rwanda]{"entity": "location"}
+    intent: statistics
+  - action: action_check_statistics
+
+- story: statistics
+  steps: 
+  - user: |
+      imibare yose hamwe yabanduye
+    intent: statistics
+  - action: action_check_statistics
+
+# Prevention 1
+- story: 1-show covid prevention measures
+  steps:
+  - user: |
+      kwirinda [covid 19]{"entity":"disease"}?
+    intent: prevention
+  - action: utter_prevention
+
+# Prevention 2
+- story: 2-show covid prevention measures
+  steps:
+  - user: |
+      ni izihe ngamba zo kwirinda?
+    intent: prevention
+  - action: utter_prevention
+# Prevention 3
+- story: 3-show covid prevention measures
+  steps:
+  - user: |
+      rwamagana turirinda dute?
+    intent: prevention
+  - action: utter_prevention
+
+# Fines and penalties
+- story: 1- show fines and penalties
+  steps:
+  - user: |
+      nzishyura angahe yo [kutambara agapfukamunwa]{"entity":"offence-mask"}?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+
+# Fines and penalties 2
+- story: 2- show fines and penalties
+  steps:
+  - user: |
+      bizagenda gute nintubahiriza [amasaha ntarengwa]{"entity":"offence-curfew"}?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+  
+# Fines and penalties 3
+- story: 3- show fines and penalties
+  steps:
+  - user: |
+      mfatiwe mu [kabari]{"entity":"offence-bar"}?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+  
+# Fines and penalties 4
+- story: 4- show fines and penalties
+  steps:
+  - user: |
+      abagiye mu [matsinda atemewe]{"entity":"offence-gathering"} bishyura angahe?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+
+# Fines and penalties 5
+- story: 5- show fines and penalties
+  steps:
+  - user: |
+      biragenda gute [nintaguma mu rugo]{"entity":"offence-lockdown"}?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+
+# Fines and penalties 6
+- story: 6- show fines and penalties
+  steps:
+  - user: |
+      bigendute iyo umuntu yishe amabwiriza yo [guhana intera]{"entity":"offence-distance"}?
+    intent: fines_penalties
+  - action: action_check_fines_penalties
+
+# Testing cost
+- story: 1- show the covid testing cost
+  steps:
+  - user: |
+      igipimo cya [covid 19]{"entity":"disease"} ni amafranga angahe?
+    intent: testing_costs
+  - action: utter_testing_costs
+
+# Testing cost 2
+- story: 2- show the covid testing cost
+  steps:
+  - user: |
+      kwipimisha [covid]{"entity":"disease"} ni angahe ?
+    intent: testing_costs
+  - action: utter_testing_costs
+
+# Testing Validity
+- story: 1- show validity of covid test
+  steps:
+  - user: |
+      igipimo cya [covid]{"entity":"disease"} gitakaza agaciro ryari?
+    intent: testing_validity
+  - action: utter_testing_validity
+
+# Testing Validity 2
+- story: 2- show validity of covid test
+  steps:
+  - user: |
+      nafashe igipimo cya [covid]{"entity":"disease"} ejo hashize, ese cyaba kigifite agaciro?
+    intent: testing_validity
+  - action: utter_testing_validity
+
+# Testing centers
+- story: 1- show the covid testing centers
+  steps:
+  - user: |
+      ni hehe najya ngo nipimishe [covid]{"entity":"disease"} 
+    intent: testing_centers
+  - action: action_show_testing_centers
+
+  # Testing centers 2
+- story: 2- show the covid testing centers
+  steps:
+  - user: |
+      nakwipimishiriza hehe [covid]{"entity":"disease"} 
+    intent: testing_centers
+  - action: action_show_testing_centers
+
+
+
+

@@ -1,0 +1,54 @@
+version: "2.0"
+
+stories:
+
+- story: symptoms + salutations
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+
+- story: symptoms + salutations
+  steps:
+  - intent: symptoms
+  - action: action_kba_layer
+
+- story: check statistics
+  steps:
+  - intent: statistics
+  - action: action_check_statistics
+
+- story: send off
+  steps:
+  - intent: sendoff
+  - action: utter_sendoff
+
+- story: preventions
+  steps:
+  - intent: prevention
+  - action: action_kba_layer
+
+- story: Penalities
+  steps:
+  - intent: fines_penalties
+  - action: action_check_fines_penalties
+
+- story: testing cost
+  steps:
+  - intent: testing_costs
+  - action: action_kba_layer
+
+- story: testing validity
+  steps:
+  - intent: testing_validity
+  - action: action_kba_layer
+
+- story: testing centers
+  steps:
+  - intent: testing_centers
+  - action: action_show_testing_centers
+
+- story: affirmations
+  steps:
+  - intent: affirm
+  - action: action_default_ask_affirmation
+  
